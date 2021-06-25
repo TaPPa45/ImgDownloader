@@ -1,0 +1,13 @@
+<h1>Список изображений</h1>
+{% if images %} 
+    {% for img in images%} 
+    <a href='/image/{{img.id}}'><h3>{{img.title}}<h3></a>
+    <br>
+    {% endfor %} 
+ {% else %}
+    <div>
+        Нет доступных изображений
+    </div>
+{% endif %}
+<br>
+<a href='/add_image/'>Добавить изображения</a>

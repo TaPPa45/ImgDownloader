@@ -1,0 +1,11 @@
+<h1>{{image.title}}</h1>
+<br>
+<form method="post" enctype="multipart/form-data">
+    {% csrf_token %} {{ form.as_p }}
+    <button type="submit">Отправить</button>
+</form>
+<br>
+<a href='/images/'> вернуться к списку изображений</a>
+<br>
+<img src="/m/{{image.image}}"/>
+<br>
